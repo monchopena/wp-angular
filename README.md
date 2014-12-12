@@ -38,13 +38,13 @@ grunt serve
 
 ## In your own WordPress
 
-### We start from a clean install of WordPress :
+1) We start from a clean install of WordPress :
 
 http://codex.wordpress.org/Installing_WordPress
 
-### Install the following plugins:
+2) Install the following plugins:
 
-#### JSON API: https://wordpress.org/plugins/json-api/
+a) JSON API: https://wordpress.org/plugins/json-api/
 
 There are other plugins, some more famous even, but this has the advantage that it's very easy to add new options as discussed below.
 
@@ -66,7 +66,7 @@ Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
 Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
 ```
 
-#### Social Icons Widget: https://wordpress.org/plugins/social-icons-widget/
+b) Social Icons Widget: https://wordpress.org/plugins/social-icons-widget/
 
 With this widget we'll learn how to access to a widget information from the API.
 
@@ -76,21 +76,21 @@ From 'Appearance> Widgets' we add the widget to Footer and fill any of the field
 
 You can change this easily in the file app/index.html.
 
-### Header Image: from Appearance> Header add a background image.
+3) Header Image: from Appearance> Header add a background image.
 
-### Add a menu to wordpress with the name "main". Sample:
+4) Add a menu to wordpress with the name "main". Sample:
 
 ![alt menu_main](https://raw.githubusercontent.com/monchopena/wp-angular/master/captures/menu_main.png)
 
-### Contact: create a page called "contact". In the comments of this page you will see requests from the form.
+5) Contact: create a page called "contact". In the comments of this page you will see requests from the form.
 
-### Show the description in page: this requires creating one custom field called description
+6) Show the description in page: this requires creating one custom field called description
 
 ![alt custom_field_description](https://raw.githubusercontent.com/monchopena/wp-angular/master/captures/custom_field_description.png)
 
-### In posts fill excerp field and you'll see like a description.
+7) In posts fill excerp field and you'll see like a description.
 
-### Change in app/scripts/app.js the URL of the API. for example
+8) Change in app/scripts/app.js the URL of the API. for example
 
 ```js
 api_url var = 'https://puchi-cuchi.rhcloud.com/api';
@@ -99,3 +99,8 @@ api_url var = 'https://puchi-cuchi.rhcloud.com/api';
 ## License
 
 [The MIT License (MIT)](https://raw.githubusercontent.com/monchopena/wp-angular/master/LICENSE).
+
+
+
+
+
