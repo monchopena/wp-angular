@@ -1,6 +1,13 @@
-node_modules/
-bower_components/
-*.log
-
-build/
-dist/
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+npm-debug.log
+#base template
+startbootstrap-clean-blog-1.0.0
+#mac
+*/.DS_Store
+.DS_Store
+.DS_Store?
+._*

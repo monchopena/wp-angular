@@ -1,0 +1,51 @@
+<!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('{{info.blog_header_image}}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>{{info.blog_title}}</h1>
+                        <hr class="small">
+                        <span class="subheading">{{info.blog_description}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	            
+	            <p ng-show="author_name">Filter by: {{author_name}}</p>
+	            
+                <div class="post-preview" ng-repeat="post in posts" ng-cloak>
+                    <a href="/#/post/{{post.slug}}">
+                        <h2 class="post-title">
+                            {{post.title_plain}}
+                        </h2>
+                        <h3 class="post-subtitle">
+                            {{post.excerpt | htmlToPlaintext}}
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="/#/home/1/{{post.author.slug}}">{{post.author.name}}</a> on {{post.date}}</p>
+                    
+                    <hr>
+                </div>
+                
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="previous" ng-show="previous">
+			        	<a href="{{previous}}">&larr; Previous Posts</a>
+			        </li>
+			    	<li class="next" ng-show="next">
+			        	<a href="{{next}}">Next &rarr;</a>
+			        </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr>
